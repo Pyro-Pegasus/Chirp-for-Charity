@@ -69,12 +69,12 @@ header nav a{
 /*INTRO/HERO*/
 
 .hero{
-  height: 48rem;
+/*  height: 48rem;*/
+  height: 80vh;
   /*GRID*/
   display: grid;
-  grid-template-columns: 3;
-  grid-template-rows: 1;
-/*  overflow: hidden;*/
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
   background-color: var(--color-green-dark);
   margin: 0;
 /*  padding-top: 6.25rem;*/
@@ -85,10 +85,22 @@ header nav a{
   grid-column: 1/span 3;
   grid-row: 1;
   /*sizing/styling*/
+  height: 100%;
   width: 100%;
-  align-self: end;
+  object-fit: cover;
+  align-self: center;
   opacity: 40%;
-/*  position: static;*/
+}
+
+@media screen and (min-width: 40em){
+  .hero img{
+    /*position on grid*/
+    grid-column: 1/span 3;
+    grid-row: 1;
+    /*sizing/styling*/
+    align-self: end;
+  /*  position: static;*/
+  }
 }
 
 .hero p{
@@ -105,7 +117,31 @@ header nav a{
   font-weight: 400;
 }
 
+@media screen and (min-width: 40em){
+  .hero p{
+    /*position on grid*/
+    grid-column: 3;
+    grid-row: 1;
+    align-self: center;
+    justify-self: start;
+    text-align: left;
+    padding-right: 3.5rem;
+    /*styling*/
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+}
 
+.of-the-week{
+/*  text-decoration: underline;*/
+  font-weight: 600;
+}
+
+.charity{
+  font-style: italic;
+  /*text-decoration: underline;*/
+}
 
 /* FEATURES & BENEFITS*/
 .features-benefits{
