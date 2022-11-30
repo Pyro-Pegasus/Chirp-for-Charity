@@ -1,6 +1,7 @@
 :root{
   --color-green-med: #A3DDB5;
   --color-green-dark: #3A5A40;
+  --color-green-light: #DEF5E5;
   --color-gray: #4A4A4A;
   --text-serif: 'Lora', serif;
 }
@@ -268,7 +269,7 @@ header nav a{
 
 .company-story .text{
   text-align: center;
-  max-width: 72%;
+  max-width: 60%;
 }
 
 .company-story h2{
@@ -300,14 +301,61 @@ header nav a{
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--color-green-dark);
-  margin: 0;
+  margin: 0 0 2rem 0;
 }
 
-.faq p{
+/*.faq p{
   font-size: 1.25rem;
   font-weight: 400;
   color: var(--color-gray);
   max-width: 72%;
+}*/
+
+.faq-accordion{
+  max-width: 60%;
+  /* text-align: center;*/
+}
+
+dl{
+  margin: 0;
+}
+
+dt{
+  position: relative;
+  /*styling*/
+/*  padding: 1rem 3rem 1rem 1rem;*/
+  padding: 2rem 2.5rem;
+  border-radius: 1.25rem;
+  cursor: pointer;
+  background-color: var(--color-green-dark);
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+dt::before {
+  content: attr(data-before);
+  position: absolute;
+  right: 1rem;
+}
+
+dd {
+  max-height: 10rem;
+  margin: 0 0 1rem 0;
+  padding: 1rem 2.5rem;
+/*  border-top: 0;*/
+  border-radius: 1.25rem;
+  background-color: var(--color-green-light);
+  color: var(--color-gray);
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.toggle-faq {
+  overflow: hidden;
+  max-height: 0px;
+  padding: 0;
+  border-bottom: 0;
 }
 
 /* CONTACT */
@@ -334,7 +382,7 @@ header nav a{
   font-weight: 400;
   color: var(--color-gray);
   text-align: center;
-  max-width: 72%;
+  max-width: 60%;
 }
 
 .form-confirmation-message p span{

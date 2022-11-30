@@ -17,3 +17,40 @@ $('#email-form').submit(function(e){
 })
 
 AOS.init()
+
+// FAQ ACCORDION
+// This does not need jQuery
+
+if(document.querySelector('.faq-accordion')){
+  
+  const dt = document.querySelectorAll('dt');
+  const dd = document.querySelectorAll('dd');
+
+  // close all faqs initially
+  dd.forEach(function(d){
+    d.classList.add('toggle-faq')
+  })
+  
+  dt.forEach(function(d,i){
+    // add plus icons
+    d.dataset.before = '+';
+    // handle click
+    d.addEventListener('click',function(){
+      // open faq
+      dd.item(i).classList.toggle('toggle-faq');
+      // change icon and highlight item
+      markSelected(d);
+    })
+  })
+
+  function markSelected(d){
+    if(d.dataset.before === '+'){
+      d.dataset.before = '–';
+      d.classList.add('selected-faq');
+    } else {
+      d.dataset.before = '+';
+      d.classList.remove('selected-faq');
+    }
+  }
+  
+};
