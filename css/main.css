@@ -12,6 +12,7 @@
 
 html{
   scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
 }
 
 body{
@@ -391,8 +392,14 @@ header nav a{
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--color-green-dark);
-  margin: 0;
+  margin: 0 0 -.5rem 0;
   padding: 0;
+}
+
+@media screen and (min-width: 40em){
+  .company-story h2{
+    margin: 0;
+  }
 }
 
 .company-story p{
@@ -410,13 +417,20 @@ header nav a{
   place-items: center;
   /*styling*/
   background-color: var(--color-green-med);
+  padding: 4rem 0;
 }
 
 .faq h2{
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--color-green-dark);
-  margin: 0 0 2rem 0;
+  margin: 0 0 1rem 0;
+}
+
+@media screen and (min-width: 40em){
+  .faq h2{
+    margin: 0 0 2rem 0;
+  }
 }
 
 /*.faq p{
@@ -489,7 +503,13 @@ dd {
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--color-green-dark);
-  margin: 0;
+  margin: 0 0 -0.5rem 0;
+}
+
+@media screen and (min-width: 40em){
+  .contact h2{
+    margin: 0;
+  }
 }
 
 .contact p{
