@@ -561,16 +561,31 @@ dd {
 }
 
 /* FOOTER */
+
 footer{
   /*grid*/
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  grid-gap: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto 1fr;
+  grid-gap: 2rem;
   padding: 2.5rem 3.5rem;
   /*styling*/
   color: #fff;
   background-color: var(--color-green-dark);
+}
+
+@media screen and (min-width: 40em){
+  footer{
+    /*grid*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 3rem;
+    padding: 2.5rem 3.5rem;
+    /*styling*/
+    color: #fff;
+    background-color: var(--color-green-dark);
+  }
 }
 
 footer h4{
@@ -593,21 +608,45 @@ footer li{
 }
 
 .past-charities{
+    /*positioning*/
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+@media screen and (min-width: 40em){
+  .past-charities{
+    /*positioning*/
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
+
+  .upcoming-charities{
+    /*positioning*/
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+@media screen and (min-width: 40em){
+  .upcoming-charities{
+    /*positioning*/
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
+.socials{
   /*positioning*/
   grid-column: 1;
   grid-row: 1;
 }
 
-.upcoming-charities{
-  /*positioning*/
-  grid-column: 2;
-  grid-row: 1;
-}
-
-.socials{
-  /*positioning*/
-  grid-column: 3;
-  grid-row: 1;
+@media screen and (min-width: 40em){
+  .socials{
+    /*positioning*/
+    grid-column: 3;
+    grid-row: 1;
+  }
 }
 
 .socials ul{
