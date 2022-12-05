@@ -54,3 +54,11 @@ if(document.querySelector('.faq-accordion')){
   }
   
 };
+
+// Collapsable Header
+const btnToggle = document.querySelector('.toggle-menu');
+const nav = document.querySelector('nav');
+
+btnToggle.addEventListener('click',function(){
+  nav.classList.toggle('hide');
+})
