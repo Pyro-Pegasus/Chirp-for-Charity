@@ -494,22 +494,33 @@ dd {
   font-weight: 400;
   color: var(--color-gray);
   text-align: center;
+  justify-self: center;
   max-width: 60%;
 }
 
 .form-confirmation-message p span{
   font-weight: 600;
+  justify-self: center;
 }
 
-.contact input{
+  .contact input{
   background: none;
   border: solid 3px var(--color-green-dark);
   border-radius: 1.25rem 0 0 1.25rem;
-  font-familY: var(--text-serif);
+  font-family: var(--text-serif);
   color: var(--color-green-dark);
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 500;
-  padding: 1rem 2rem;
+  padding: .5rem 1rem;
+}
+
+@media screen and (min-width: 40em){
+  .contact input{
+    border-radius: 1.25rem 0 0 1.25rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding: 1rem 2rem;
+  }
 }
 
 .contact input:focus{
@@ -523,11 +534,20 @@ dd {
   background-color: var(--color-green-dark);
   border: solid 3px var(--color-green-dark);
   border-radius: 0 1.25rem 1.25rem 0;
-  font-familY: var(--text-serif);
+  font-family: var(--text-serif);
   color: #fff;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 500;
-  padding: 1rem 2rem;
+  padding: .5rem 1rem;
+}
+
+@media screen and (min-width: 40em){
+  .contact button{
+    border-radius: 0 1.25rem 1.25rem 0;
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding: 1rem 2rem;
+  }
 }
 
 .contact button:hover{
