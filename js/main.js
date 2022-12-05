@@ -16,7 +16,7 @@ $('#email-form').submit(function(e){
   }
 })
 
-AOS.init()
+AOS.init();
 
 // FAQ ACCORDION
 // This does not need jQuery
