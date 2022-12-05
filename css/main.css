@@ -76,7 +76,7 @@ header nav{
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 0;
+  z-index: 1;
   width: 100%;
   height:  100vh;
   display: flex;
@@ -93,6 +93,7 @@ header nav{
 @media screen and (min-width: 40em){
   header nav {
     grid-column: 2;
+    position: static;
     justify-self: end;
     align-self: center;
     width: auto;
@@ -100,6 +101,8 @@ header nav{
     display: flex;
     flex-direction: row;
     gap: 2rem;
+    background-color: #fff;
+    z-index: 1;
     padding: 0;
     margin: 0;
   }
