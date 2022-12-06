@@ -379,15 +379,38 @@ header nav a{
   /*grid*/
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+/*  grid-template-rows: 1fr;*/
+  grid-template-rows: 1fr 1fr;
   place-items: center;
   /*styling*/
+  height: 44rem;
   background-color: var(--color-green-med);
 }
 
+
+.company-story img{
+  grid-column: 1;
+/*  grid-row: 1;*/
+  grid-row: 1/span 2;
+  z-index: 0;
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  margin-top: 8rem;
+  margin-top: 8rem;
+}
+
 .company-story .text{
+  /*positon on grid*/
+  grid-column: 1;
+/*  grid-row: 1;*/
+  grid-row: 2;
+  z-index: 1;
+  position: static;
+  align-self: start;
   text-align: center;
-  max-width: 60%;
+  max-width: 30%;
+  z-index: 1;
 }
 
 .company-story h2{
