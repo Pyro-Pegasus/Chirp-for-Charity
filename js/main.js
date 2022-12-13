@@ -55,10 +55,34 @@ if(document.querySelector('.faq-accordion')){
   
 };
 
-// Collapsable Header
-const btnToggle = document.querySelector('.toggle-menu');
-const nav = document.querySelector('nav');
+if( document.querySelector('nav') ){
+  // Collapsable Header
+  const btnToggle = document.querySelector('.toggle-menu');
+  const nav = document.querySelector('nav');
+  const navLinks = document.querySelectorAll('nav a');
+  nav.classList.add('hide');
+  let navState = 0;
 
-btnToggle.addEventListener('click',function(){
-  nav.classList.toggle('hide');
-})
+  function toggleNav(){
+    nav.classList.toggle('hide');
+    // update toggle button with appropriate icon
+    if(navState == 0){
+      btnToggle.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+      navState = 1;
+    } else {
+      btnToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+      navState = 0;
+    }
+  }
+
+  btnToggle.addEventListener('click',function(){
+    toggleNav();
+  })
+
+  navLinks.forEach(function(l){
+    l.addEventListener('click',function(){
+      toggleNav();
+    })
+  })
+
+}
