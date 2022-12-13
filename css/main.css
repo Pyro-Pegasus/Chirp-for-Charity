@@ -385,57 +385,106 @@ header nav a{
   display: grid;
   grid-template-columns: 1fr;
 /*  grid-template-rows: 1fr;*/
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   place-items: center;
   /*styling*/
-  height: 44rem;
+  height: 22rem;
   background-color: var(--color-green-med);
 }
 
+@media screen and (min-width: 40em){
+  .company-story{
+    /*grid*/
+    display: grid;
+    grid-template-columns: 1fr;
+/*  grid-template-rows: 1fr;*/
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+    /*styling*/
+    height: 44rem;
+    background-color: var(--color-green-med);
+  }
+}
 
 .company-story img{
   grid-column: 1;
 /*  grid-row: 1;*/
-  grid-row: 1/span 2;
+  grid-row: 1/span 3;
   z-index: 0;
   position: absolute;
-  width: 60%;
-  height: 60%;
-  margin-top: 8rem;
-  margin-top: 8rem;
+  width: 92%;
+  height: 92%;
+  margin: 0;
+/*  margin-top: 8rem;
+  margin-top: 8rem;*/
+}
+
+@media screen and (min-width: 40em){
+  .company-story img{
+    grid-column: 1;
+/*  grid-row: 1;*/
+    grid-row: 1/span 2;
+    width: 60%;
+    height: 60%;
+    margin-top: 8rem;
+    margin-top: 8rem;
+  }
 }
 
 .company-story .text{
   /*positon on grid*/
   grid-column: 1;
 /*  grid-row: 1;*/
-  grid-row: 2;
-  z-index: 1;
+  grid-row: 2/span2;
   position: static;
   align-self: start;
   text-align: center;
-  max-width: 30%;
+  max-width: 50%;
   z-index: 1;
+  margin: -.75rem 0 0 0;
+}
+
+@media screen and (min-width: 40em){
+  .company-story .text{
+    /*positon on grid*/
+    grid-column: 1;
+/*  grid-row: 1;*/
+    grid-row: 2;
+    position: static;
+    align-self: start;
+    text-align: center;
+    max-width: 30%;
+    margin: 0;
+  }
 }
 
 .company-story h2{
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   color: var(--color-green-dark);
-  margin: 0 0 -.5rem 0;
+  margin: -1rem 0 -1rem 0;
   padding: 0;
 }
 
 @media screen and (min-width: 40em){
   .company-story h2{
+    font-size: 2.5rem;
     margin: 0;
   }
 }
 
 .company-story p{
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 400;
   color: var(--color-gray);
+}
+
+@media screen and (min-width: 40em){
+  .company-story p{
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--color-gray);
+  }
 }
 
 /* FAQ */
