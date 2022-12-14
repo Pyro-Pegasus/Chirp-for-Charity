@@ -142,13 +142,13 @@ header nav a{
   }
 }
 
-.hide{
+header .hide{
   display: none;
 }
 
 /* hide class is not needed on wide screens */
 @media screen and (min-width: 40em){
-  .hide{
+  header .hide{
     display: flex !important;
   }
 }
