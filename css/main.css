@@ -273,22 +273,40 @@ header nav a{
   color: #fff;
   background-image: linear-gradient(#A3DDB5, #3A5A40);
   margin: 0;
+  padding: 2rem 0;
+}
+
+@media screen and (min-width: 40em){
+  .features-benefits{
+    padding: 4rem 0;
+  }
 }
 
 .features-benefits ul{
   list-style: none;
   margin: 0;
-  padding: 0;
 }
 
 .features-benefits ul li{
   display: grid;
   grid-template-rows: auto auto;
-  grid-gap: 1rem;
+  grid-gap: 0;
   justify-items: center;
   margin: 0;
   padding: 4rem 2rem;
 
+}
+
+@media screen and (min-width: 40em){
+  .features-benefits ul li{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-gap: 1rem;
+    justify-items: center;
+    margin: 0;
+    padding: 4rem 2rem;
+
+  }
 }
 
 .features-benefits ul li .image{
@@ -310,9 +328,14 @@ header nav a{
   align-items: center;
   justify-items: center;
   text-align: center;
+  margin: -1rem 0 0 0;
 }
 
-
+@media screen and (min-width: 40em){
+  .features-benefits ul li .text{
+    margin: 0;
+  }
+}
 
 @media screen and (min-width: 40em){
   .features-benefits ul{
@@ -391,6 +414,7 @@ header nav a{
   /*styling*/
   height: 22rem;
   background-color: var(--color-green-med);
+  margin: 0;
 }
 
 @media screen and (min-width: 40em){
@@ -415,7 +439,7 @@ header nav a{
   position: absolute;
   width: 92%;
   height: 92%;
-  margin: 0;
+/*  margin: 8rem 0;*/
 /*  margin-top: 8rem;
   margin-top: 8rem;*/
 }
@@ -497,7 +521,13 @@ header nav a{
   place-items: center;
   /*styling*/
   background-color: var(--color-green-med);
-  padding: 4rem 0;
+  padding: 2rem 0;
+}
+
+@media screen and (min-width: 40em){
+  .faq{
+    padding: 4rem 0;
+  }
 }
 
 .faq h2{
@@ -574,9 +604,16 @@ dd {
   grid-template-columns: auto;
   grid-template-rows: auto;
   place-items: center;
-  padding: 13.75rem 0;
+/*  padding: 13.75rem 0;*/
+  padding: 2rem 0 4rem 0;
   /*styling*/
   background-color: var(--color-green-med);
+}
+
+@media screen and (min-width: 40em){
+  .contact{
+    padding: 4rem 0 8rem 0;
+  }
 }
 
 .contact h2{
