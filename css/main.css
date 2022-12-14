@@ -232,8 +232,8 @@ header nav a{
   align-self: start;
   justify-self: start;
   text-align: left;
-/*  padding-right: 3.5rem;
-*/  padding-top: 2rem;
+  padding-right: 1rem;
+  padding-top: 9rem;
   z-index: 1;
   /*styling*/
   color: #fff;
