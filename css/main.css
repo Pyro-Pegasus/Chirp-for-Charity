@@ -698,6 +698,7 @@ dd {
   background-color: #fff;
   color: var(--color-green-dark);
   border: solid 3px #fff;
+  cursor: pointer;
 }
 
 .contact button:active{
