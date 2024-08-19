@@ -182,6 +182,7 @@ header .hide{
   grid-template-rows: 1fr;
   background-color: var(--color-green-dark);
   margin: 0;
+  overflow: hidden
 /*  padding-top: 6.25rem;*/
 }
 
@@ -194,6 +195,7 @@ header .hide{
     grid-template-rows: 1fr;
     background-color: var(--color-green-dark);
     margin: 0;
+    overflow: hidden;
   /*  padding-top: 6.25rem;*/
   }
 }
