@@ -280,7 +280,7 @@ header .hide{
 
 @media screen and (min-width: 40em){
   .features-benefits{
-    padding: 4rem 0;
+    padding: 2rem 0;
   }
 }
 
@@ -295,7 +295,8 @@ header .hide{
   grid-gap: 0;
   justify-items: center;
   margin: 0;
-  padding: 4rem 2rem;
+  padding: 1rem 2rem;
+/*  padding: 4rem 2rem;*/
 
 }
 
@@ -306,7 +307,8 @@ header .hide{
     grid-gap: 1rem;
     justify-items: center;
     margin: 0;
-    padding: 4rem 2rem;
+    padding: 0 2rem;
+/*    padding: 4rem 2rem;*/
 
   }
 }
