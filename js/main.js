@@ -87,6 +87,9 @@ if( document.querySelector('nav') ){
   navLinks.forEach(function(l){
     l.addEventListener('click',function(){
       toggleNav();
+      //I added
+    l.addEventListener('touchstart',function(){
+      toggleNav();
     })
   })
 
