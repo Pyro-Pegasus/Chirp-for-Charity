@@ -55,34 +55,97 @@ if(document.querySelector('.faq-accordion')){
   
 };
 
+// if( document.querySelector('nav') ){
+//   // Collapsable Header
+//   const btnToggle = document.querySelector('.toggle-menu');
+//   const nav = document.querySelector('nav');
+//   const navLinks = document.querySelectorAll('nav a');
+//   nav.classList.add('hide');
+//   let navState = 0;
+
+//   function toggleNav(){
+//     nav.classList.toggle('hide');
+//     // update toggle button with appropriate icon
+//     if(navState == 0){
+//       btnToggle.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+//       navState = 1;
+//     } else {
+//       btnToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+//       navState = 0;
+//     }
+//   }
+
+//   btnToggle.addEventListener('click',function(){
+//     toggleNav();
+//   })
+
+//   navLinks.forEach(function(l){
+//     l.addEventListener('click',function(){
+//       toggleNav();
+//     })
+//   })
+
+// }
+
+
+
+//ChatGPT's "fix"...lets see if it works better
+
+// if (document.querySelector('nav')) {
+//   const btnToggle = document.querySelector('.toggle-menu');
+//   const nav = document.querySelector('nav');
+//   const navLinks = document.querySelectorAll('nav a');
+//   let navState = false;
+
+//   function toggleNav() {
+//     nav.classList.toggle('hide');
+//     navState = !navState;
+//     btnToggle.setAttribute('aria-expanded', navState);
+//     btnToggle.innerHTML = navState 
+//       ? '<i class="fa-solid fa-xmark"></i>' 
+//       : '<i class="fa-solid fa-bars"></i>';
+//   }
+
+//   // Add event listeners for both click and touchstart
+//   btnToggle.addEventListener('click', toggleNav);
+//   btnToggle.addEventListener('touchstart', toggleNav);
+
+//   navLinks.forEach((link) => {
+//     link.addEventListener('click', toggleNav);
+//     link.addEventListener('touchstart', toggleNav);
+//   });
+// }
+
+//Well, that didn't work. Lets try this
+
 if( document.querySelector('nav') ){
   // Collapsable Header
   const btnToggle = document.querySelector('.toggle-menu');
   const nav = document.querySelector('nav');
   const navLinks = document.querySelectorAll('nav a');
   nav.classList.add('hide');
-  let navState = 0;
+  let navState = false;
 
   function toggleNav(){
     nav.classList.toggle('hide');
+    navState = !navState;
+    btnToggle.setAttribute('aria-expanded', navState);
+
     // update toggle button with appropriate icon
-    if(navState == 0){
+
+    if(navState){
       btnToggle.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-      navState = 1;
     } else {
       btnToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
-      navState = 0;
     }
   }
 
-  btnToggle.addEventListener('click',function(){
-    toggleNav();
-  })
+  btnToggle.addEventListener('click', toggleNav);
+  btnToggle.addEventListener('touchstart', toggleNav);
 
-  navLinks.forEach(function(l){
-    l.addEventListener('click',function(){
-      toggleNav();
-    })
-  })
-
+  navLinks.forEach((link) => {
+    link.addEventListener('click', toggleNav);
+    link.addEventListener('touchstart', toggleNav);
+  });
 }
+
