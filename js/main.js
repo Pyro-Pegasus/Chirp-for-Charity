@@ -79,6 +79,11 @@ if( document.querySelector('nav') ){
     toggleNav();
   })
 
+  // I added this one
+    btnToggle.addEventListener('touchstart',function(){
+    toggleNav();
+  })
+
   navLinks.forEach(function(l){
     l.addEventListener('click',function(){
       toggleNav();
