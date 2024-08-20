@@ -7,7 +7,7 @@
 }
 
 *{
-  box-sizing:  border-box;
+  box-sizing: border-box;
 }
 
 html{
@@ -19,6 +19,10 @@ body{
   font-family: var(--text-serif);
   font-weight: 400;
   font-style: normal;
+}
+
+section{
+  overflow-x: hidden;
 }
 
 /*HEADER*/
@@ -76,7 +80,9 @@ header nav{
   top: 0;
   left: 0;
   width: 100%;
-  height:  100vh;
+  height: auto;
+/*  min-height: 100vh;*/
+/*  height:  100vh;*/
   display: flex;
   flex-direction:  column;
   justify-content: center;
@@ -417,6 +423,7 @@ header .hide{
   place-items: center;
   /*styling*/
   height: 22rem;
+  max-width: 100%;
   background-color: var(--color-green-med);
   margin: 0;
 }
@@ -455,8 +462,8 @@ header .hide{
     grid-row: 1/span 2;
     width: 60%;
     height: 60%;
-    margin-top: 8rem;
-    margin-top: 8rem;
+    margin: 8rem 0 0 0;
+/*    margin-top: 8rem;*/
   }
 }
 
@@ -526,6 +533,7 @@ header .hide{
   /*styling*/
   background-color: var(--color-green-med);
   padding: 2rem 0;
+  margin: 0;
 }
 
 @media screen and (min-width: 40em){
@@ -574,6 +582,7 @@ dt{
   color: #fff;
   font-size: 1.25rem;
   font-weight: 600;
+  margin: 0;
 }
 
 dt::before {
@@ -714,6 +723,7 @@ footer{
   grid-template-rows: auto 1fr;
   grid-gap: 2rem;
   padding: 2.5rem 3.5rem;
+  margin: 0;
   /*styling*/
   color: #fff;
   background-color: var(--color-green-dark);
