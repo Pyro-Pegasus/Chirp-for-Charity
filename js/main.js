@@ -118,34 +118,77 @@ if(document.querySelector('.faq-accordion')){
 
 //Well, that didn't work. Lets try this
 
-if( document.querySelector('nav') ){
-  // Collapsable Header
-  const btnToggle = document.querySelector('.toggle-menu');
-  const nav = document.querySelector('nav');
-  const navLinks = document.querySelectorAll('nav a');
-  nav.classList.add('hide');
-  let navState = false;
+// if( document.querySelector('nav') ){
+//   // Collapsable Header
+//   const btnToggle = document.querySelector('.toggle-menu');
+//   const nav = document.querySelector('nav');
+//   const navLinks = document.querySelectorAll('nav a');
+//   nav.classList.add('hide');
+//   let navState = false;
 
-  function toggleNav(){
-    nav.classList.toggle('hide');
-    navState = !navState;
-    btnToggle.setAttribute('aria-expanded', navState);
+//   function toggleNav(){
+//     nav.classList.toggle('hide');
+//     navState = !navState;
+//     btnToggle.setAttribute('aria-expanded', navState);
 
-    // update toggle button with appropriate icon
+//     // update toggle button with appropriate icon
 
-    if(navState){
-      btnToggle.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-    } else {
-      btnToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+//     if(navState){
+//       btnToggle.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+//     } else {
+//       btnToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+//     }
+//   }
+
+//   btnToggle.addEventListener('click', toggleNav);
+//   btnToggle.addEventListener('touchstart', toggleNav);
+
+//   navLinks.forEach((link) => {
+//     link.addEventListener('click', toggleNav);
+//     link.addEventListener('touchstart', toggleNav);
+//   });
+// }
+
+//Ok lets copy and paste some shit
+
+$(document).ready(function() {
+  // Check if nav exists
+  if ($('nav').length) {
+    // Collapsible Header
+    const btnToggle = $('.toggle-menu');
+    const nav = $('nav');
+    const navLinks = $('nav a');
+
+    // Initially hide the navigation
+    nav.addClass('hide');
+    let navState = false; // Using boolean for navState
+
+    // Function to toggle navigation
+    function toggleNav() {
+      nav.toggleClass('hide'); // Toggle 'hide' class
+      
+      // Update navState and button icon
+      navState = !navState; // Toggle navState
+      if (navState) {
+        btnToggle.html('<i class="fa-solid fa-xmark"></i>'); // Show X icon
+      } else {
+        btnToggle.html('<i class="fa-solid fa-bars"></i>'); // Show Hamburger icon
+      }
+
+      // Set aria-expanded attribute
+      btnToggle.attr('aria-expanded', navState); // Set aria-expanded based on navState
     }
+
+    // Event listener for the toggle button
+    btnToggle.on('click', function() {
+      toggleNav(); // Call toggleNav when the button is clicked
+    });
+
+    // Event listeners for navigation links
+    navLinks.on('click', function() {
+      toggleNav(); // Call toggleNav when a nav link is clicked
+    });
   }
+});
 
-  btnToggle.addEventListener('click', toggleNav);
-  btnToggle.addEventListener('touchstart', toggleNav);
-
-  navLinks.forEach((link) => {
-    link.addEventListener('click', toggleNav);
-    link.addEventListener('touchstart', toggleNav);
-  });
-}
 
