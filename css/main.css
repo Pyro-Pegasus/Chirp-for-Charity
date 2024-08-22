@@ -81,9 +81,7 @@ header nav{
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
-/*  min-height: 100vh;*/
-/*  height:  100vh;*/
+  height:  100vh;
   display: flex;
   flex-direction:  column;
   justify-content: center;
