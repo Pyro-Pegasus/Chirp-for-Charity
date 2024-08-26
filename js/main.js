@@ -21,30 +21,53 @@ AOS.init();
 // FAQ ACCORDION
 // This does not need jQuery
 
-if(document.querySelector('.faq-accordion')){
-  
+if (document.querySelector('.faq-accordion')) {
   const dt = document.querySelectorAll('dt');
   const dd = document.querySelectorAll('dd');
 
-  // close all faqs initially
-  dd.forEach(function(d){
-    d.classList.add('toggle-faq')
-  })
-  
-  dt.forEach(function(d,i){
-    // add plus icons
-    d.dataset.before = '+';
-    // handle click
-    d.addEventListener('click',function(){
-      // open faq
-      dd.item(i).classList.toggle('toggle-faq');
-      // change icon and highlight item
-      markSelected(d);
-    })
-  })
+  // Close all FAQs initially
+  dd.forEach(function(d) {
+    d.classList.add('toggle-faq');
+  });
 
-  function markSelected(d){
-    if(d.dataset.before === '+'){
+  dt.forEach(function(d, i) {
+    // Add plus icons
+    d.dataset.before = '+';
+    
+    // Make <dt> focusable
+    d.setAttribute('tabindex', '0');
+    
+    // Handle click
+    d.addEventListener('click', function() {
+      // Open FAQ
+      dd.item(i).classList.toggle('toggle-faq');
+      // Change icon and highlight item
+      markSelected(d);
+    });
+    
+    // Handle focus event for keyboard navigation
+    d.addEventListener('focus', function() {
+      d.classList.add('focus');
+    });
+
+    // Handle blur event to remove focus styles
+    d.addEventListener('blur', function() {
+      d.classList.remove('focus');
+    });
+
+    // Handle keyboard interaction
+    d.addEventListener('keydown', function(event) {
+      console.log('Key pressed:', event.key); // Log the key value to debug
+      // Handle Enter and Space keys
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault(); // Prevent default action
+        d.click(); // Trigger click event
+      }
+    });
+  });
+
+  function markSelected(d) {
+    if (d.dataset.before === '+') {
       d.dataset.before = '–';
       d.classList.add('selected-faq');
     } else {
@@ -52,8 +75,8 @@ if(document.querySelector('.faq-accordion')){
       d.classList.remove('selected-faq');
     }
   }
-  
-};
+}
+
 
 // if( document.querySelector('nav') ){
 //   // Collapsable Header
