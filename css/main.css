@@ -735,7 +735,8 @@ dd {
 .contact input:focus{
 /*  background-color: var(--color-green-dark);
   color: #fff;*/
-  background-color: #fff;
+/*  background-color: #fff;*/
+  background-color: var(--color-green-light);
   outline: 0;
 }
 
