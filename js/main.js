@@ -150,6 +150,7 @@ if(document.querySelector('.faq-accordion')){
 // }
 
 //Ok lets copy and paste some shit
+//They, this one works! YAAAAY
 
 $(document).ready(function() {
   // Check if nav exists

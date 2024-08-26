@@ -126,6 +126,15 @@ header nav a{
     color: var(--color-green-dark);
     text-decoration: none;
   }
+
+  header nav a:hover{
+    color: var(--color-green-med);
+  }
+
+  header nav a:focus{
+    color: var(--color-green-med);
+    outline: 2px solid var(--color-green-med);
+  }
 }
 
 .toggle-menu{
@@ -173,6 +182,16 @@ header .hide{
     padding: .75rem 1.5rem;
     background-color: var(--color-green-med);
   }
+
+  .shop:hover{
+    background-color: var(--color-green-dark);
+    color: var(--color-green-med);
+  }
+
+/*  body header nav a.shop:focus{
+    outline: none;
+    border: 2px solid var(--color-green-dark);
+  }*/
 }
 
 
