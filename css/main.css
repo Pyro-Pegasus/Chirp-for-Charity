@@ -431,6 +431,15 @@ header .hide{
 /*  margin-top: 1rem;*/
 }
 
+.features-benefits ul li .text a:hover{
+  background-color: var(--color-green-med);
+  color: #fff;
+}
+
+.features-benefits ul li .text a:focus{
+  outline: 2px solid var(--color-green-med);
+}
+
 
 /* COMPANY STORY*/
 .company-story{
