@@ -641,6 +641,18 @@ dt{
   margin: 0;
 }
 
+dt:hover{
+  color: var(--color-green-dark);
+  background-color: var(--color-green-light);
+  outline: 4px solid var(--color-green-dark);
+}
+
+dt:focus{
+  color: var(--color-green-dark);
+  background-color: var(--color-green-light);
+  outline: 4px solid var(--color-green-dark);
+}
+
 dt::before {
   content: attr(data-before);
   position: absolute;
