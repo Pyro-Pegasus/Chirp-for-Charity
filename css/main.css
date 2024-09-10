@@ -280,17 +280,18 @@ header .hide{
   justify-self: start;
   text-align: left;
   padding-right: 1rem;
-  padding-top: 9rem;
+  padding-top: 5rem;
   z-index: 1;
   /*styling*/
   color: #fff;
-  font-size: .75rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 
 @media screen and (min-width: 30em){
   .hero p{
     font-size: 1rem;
+    padding-top: 9rem;
   }
 }
 
