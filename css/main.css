@@ -542,7 +542,8 @@ header .hide{
 /*  grid-row: 1;*/
   grid-row: 2/span2;
   position: static;
-  align-self: start;
+  align-self: center;
+/*  align-self: start;*/
   text-align: center;
   max-width: 55%;
   z-index: 1;
@@ -552,6 +553,7 @@ header .hide{
 @media screen and (min-width: 32em){
   .company-story .text{
     max-width: 50%;
+    align-self: start;
   }
 }
 
