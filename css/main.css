@@ -556,7 +556,7 @@ header .hide{
   text-align: center;
   max-width: 65%;
   z-index: 1;
-  margin: -.80rem 0 0 0;
+  margin: -.78rem 0 0 0;
 }
 
 @media screen and (min-width: 30em){
