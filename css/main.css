@@ -695,6 +695,18 @@ dd {
   font-weight: 400;
 }
 
+dd a{
+  color: var(--color-green-dark);
+}
+
+dd a:hover{
+  color: var(--color-green-med);
+}
+
+dd a:focus{
+  outline: 2px solid var(--color-green-dark);
+}
+
 .toggle-faq {
   overflow: hidden;
   max-height: 0px;
