@@ -505,14 +505,23 @@ header .hide{
   /*Safari adjustments*/
   position: relative;
 /*  position: absolute;*/
-  width: 92%;
+  width: 95%;
   height: auto;
-  max-width: 92%;
-  max-height: 92%;
+  max-width: 95%;
+  max-height: 95%;
 
 /*Safari adjustments*/
   -webkit-transform: translateZ(0);
   -webkit-backface-visibility: hidden;
+}
+
+@media screen and (min-width: 30em){
+  .company-story img{
+    width: 92%;
+    height: auto;
+    max-width: 92%;
+    max-height: 92%;
+  }
 }
 
 @media screen and (min-width: 40em){
