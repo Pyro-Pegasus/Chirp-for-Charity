@@ -592,7 +592,7 @@ header .hide{
 }
 
 .company-story p{
-  font-size: .5rem;
+  font-size: .75rem;
   font-weight: 400;
   color: var(--color-gray);
 }
@@ -606,7 +606,6 @@ header .hide{
 @media screen and (min-width: 40em){
   .company-story p{
     font-size: 1.25rem;
-    font-weight: 400;
     color: var(--color-gray);
   }
 }
