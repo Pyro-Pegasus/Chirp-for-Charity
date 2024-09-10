@@ -554,7 +554,7 @@ header .hide{
   align-self: center;
 /*  align-self: start;*/
   text-align: center;
-  max-width: 55%;
+  max-width: 65%;
   z-index: 1;
   margin: -.75rem 0 0 0;
 }
