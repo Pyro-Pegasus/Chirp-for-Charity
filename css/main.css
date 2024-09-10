@@ -592,9 +592,15 @@ header .hide{
 }
 
 .company-story p{
-  font-size: 1rem;
+  font-size: .5rem;
   font-weight: 400;
   color: var(--color-gray);
+}
+
+@media screen and (min-width: 30em){
+  .company-story p{
+    font-size: 1rem;
+  }
 }
 
 @media screen and (min-width: 40em){
