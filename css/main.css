@@ -299,8 +299,14 @@ header .hide{
     padding-top: 0;
     /*styling*/
     color: #fff;
+    font-size: 1.5rem
+/*    font-size: 2rem;*/
+  }
+}
+
+@media screen and (min-width: 60em){
+  .hero p{
     font-size: 2rem;
-    font-weight: 400;
   }
 }
 
